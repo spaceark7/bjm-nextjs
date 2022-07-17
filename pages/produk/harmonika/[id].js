@@ -503,8 +503,8 @@ const DetailPage = ({ data, recommended }) => {
 }
 
 export const getStaticPaths = async () => {
-  const paths = productList.harmonika.map((product) => ({
-    params: { detailId: product.id },
+  const paths = await productList.harmonika.map((product) => ({
+    params: { id: product.id },
   }))
 
   return {
@@ -514,10 +514,10 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const { detailId } = params
-  const data = productList.harmonika.find((product) => product.id === detailId)
+  const { id } = params
+  const data = await productList.harmonika.find((product) => product.id === id)
   const recommended = productList.harmonika.filter(
-    (product) => product.id !== detailId
+    (product) => product.id !== id
   )
 
   return {

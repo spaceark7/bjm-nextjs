@@ -511,8 +511,8 @@ const DetailPage = ({ data, recommended }) => {
 }
 
 export const getStaticPaths = async () => {
-  const paths = productList.bronjong.map((product) => ({
-    params: { detailId: product.id },
+  const paths = await productList.bronjong.map((product) => ({
+    params: { id: product.id },
   }))
 
   return {
@@ -522,10 +522,10 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const { detailId } = params
-  const data = productList.bronjong.find((product) => product.id === detailId)
+  const { id } = params
+  const data = await productList.bronjong.find((product) => product.id === id)
   const recommended = productList.bronjong.filter(
-    (product) => product.id !== detailId
+    (product) => product.id !== id
   )
   return {
     props: {
