@@ -10,7 +10,7 @@ import NavMenu from './NavMenu'
 const Navigation = () => {
   const [name, setName] = useState('')
   const [company, setCompany] = useState('')
-  let message = `Halo, Perkenalkan Saya ${name} dari perusahaan ${company}. Saya ingin menanyakan tenang produk yang bapak jual`
+  let message = `Halo, Saya tertarik dan ingin menanyakan tentang produk yang bapak jual`
   let encoded = encodeURI(message)
   const [isOpen, setOpen] = useState(false)
   return (
@@ -51,8 +51,8 @@ const Navigation = () => {
       </div>
       {/* Small SCreen menu */}
       {isOpen ? (
-        <div className='mobile-menu absolute left-0 top-16  h-screen h-full w-full -translate-y-0 overflow-y-scroll bg-gray-50 pb-20 pb-28   transition duration-1000 ease-in-out'>
-          <div className='min-h-[100vh] w-full overflow-y-auto  '>
+        <div className='mobile-menu absolute left-0 top-16  h-screen  w-full -translate-y-0 overflow-y-scroll bg-gray-50 pb-20 pb-28   transition duration-1000 ease-in-out'>
+          <div className='min-h-screen w-full overflow-y-auto  '>
             <Disclosure>
               {({ open }) => (
                 <>

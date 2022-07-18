@@ -75,8 +75,8 @@ const DetailPage = ({ data, recommended }) => {
           open={isOpen}
           onClose={() => setIsOpen(false)}
         >
-          <div className='flex min-h-screen items-center justify-center px-4'>
-            <Dialog.Overlay className='fixed inset-0 bg-black opacity-30' />
+          <div className='flex h-full min-h-screen items-center justify-center px-4'>
+            <Dialog.Overlay className='fixed inset-0 min-h-screen bg-black opacity-30' />
             <div className='relative mx-auto min-h-[50vh] max-w-md overflow-x-hidden rounded bg-white px-8 pt-8 pb-2'>
               <form onSubmit={handleSubmit}>
                 <div>

@@ -4,7 +4,7 @@ import UseAnimations from 'react-useanimations'
 import loading2 from 'react-useanimations/lib/loading2'
 
 const UsePageTransitionHooks = () => {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   const router = useRouter()
 
@@ -32,7 +32,7 @@ const UsePageTransitionHooks = () => {
         loading ? 'z-20 block' : 'hidden'
       } absolute left-0 top-0  h-full w-full bg-white`}
     >
-      <div className='fixed z-50 flex h-screen w-full items-center bg-white'>
+      <div className='fixed z-50 flex h-[80vh] w-full items-center bg-white'>
         <div className='mx-auto mb-12 flex max-w-lg flex-col justify-center'>
           <UseAnimations
             className='mx-auto'
