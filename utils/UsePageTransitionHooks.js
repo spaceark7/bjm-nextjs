@@ -4,7 +4,7 @@ import UseAnimations from 'react-useanimations'
 import loading2 from 'react-useanimations/lib/loading2'
 
 const UsePageTransitionHooks = () => {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   const router = useRouter()
 
